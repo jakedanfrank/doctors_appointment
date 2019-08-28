@@ -1,0 +1,16 @@
+<h1><%= @user.full_name %></h1>
+<hr />
+<h2>Doctors</h2>
+<ul>
+  <% @user.doctors.each do |doctor| %>
+    <li>
+      <%= link_to doctor.full_name, doctor %>
+    </li>
+  <% end %>
+</ul>
+<br />
+<br />
+<br />
+<%= link_to "Delete Patient", @user, method: :delete, class: "ui red button inverted" %>
+<%= link_to "Edit Patient", edit_user_path, class: "ui red button inverted" %>
+<%= "users show.html.erb" %>
